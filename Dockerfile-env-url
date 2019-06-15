@@ -1,0 +1,7 @@
+FROM buildpack-deps:stretch-curl
+
+ENV TOMCAT_MIRROR=http://download.nextag.com \
+    TOMCAT_VERSION=9.0.0.M22
+ENV TOMCAT_URL=$TOMCAT_MIRROR/apache/tomcat/tomcat-9/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
+
+RUN curl -SL $TOMCAT_URL | tar -zxC /opt

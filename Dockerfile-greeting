@@ -1,0 +1,7 @@
+FROM debian:stretch
+
+ENV GREETING=Hello \
+    NAME=World
+ADD greeting.sh /usr/local/bin/greeting.sh
+
+CMD ["/usr/local/bin/greeting.sh"]

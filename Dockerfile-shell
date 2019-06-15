@@ -1,0 +1,3 @@
+FROM microsoft/windowsservercore
+
+SHELL ["powershell", "-NoProfile", "-Command"]

@@ -1,0 +1,13 @@
+FROM ruby:2.4.1
+
+RUN apt-get update && apt-get install -y nodejs
+RUN gem install rails
+
+RUN mkdir /app
+WORKDIR /app
+RUN rails new blog
+
+EXPOSE 3000
+
+WORKDIR /app/blog
+ENTRYPOINT ["bin/rails", "server"]

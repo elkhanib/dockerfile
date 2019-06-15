@@ -1,0 +1,3 @@
+FROM buildpack-deps:stretch-curl
+
+RUN /bin/bash -c "set -o pipefail && wget -O - https://google/ | wc -l"

@@ -1,0 +1,4 @@
+FROM buildpack-deps:stretch-curl
+
+RUN curl -SL http://download.nextag.com/apache/tomcat/tomcat-9/v9.0.0.M22/bin/apache-tomcat-9.0.0.M22.tar.gz \
+ | tar -zxC /opt

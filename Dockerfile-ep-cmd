@@ -1,0 +1,4 @@
+FROM debian:stretch
+
+ENTRYPOINT ["echo"]
+CMD ["hello", "world"]
